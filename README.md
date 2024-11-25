@@ -29,10 +29,10 @@
 - &check; Robots Configurations.
     - &check; Porting of robot description packages to ROS 2.
     - &check; Porting of robot URDF to ROS2 (add new ros2_control tag).
-    - &check; Porting of robot configurationf to ROS2.
+    - &check; Porting of robot configuration to ROS2.
     - &check; Porting of robot launch Files to ROS2.
 - &check; Upgrade go2 description model for ros2 humble
-- &check; Spawning go2 in gazebo environment.
+- &check; Spawning go2 in Gazebo environment.
 - &check; Working rviz only demo.
 - &check; Working Gazebo with teleoperated robot.
 - &check; Adding IMU and 2D LiDAR.
@@ -42,26 +42,15 @@
 
 ## 1. Installation
 
-### 1.0 Install ROS-based dependencies:
-```bash
-sudo apt install ros-humble-gazebo-ros2-control
-sudo apt install ros-humble-xacro
-sudo apt install ros-humble-robot-localization
-sudo apt install ros-humble-ros2-controllers
-sudo apt install ros-humble-ros2-control
-sudo apt install ros-humble-velodyne
-sudo apt install ros-humble-velodyne-gazebo-plugins
-sudo apt-get install ros-humble-velodyne-description
-```
-
 ### 1.1 Clone and install all dependencies:
     
 ```bash
+sudo apt update
 sudo apt install -y python3-rosdep
 rosdep update
 
 cd <your_ws>/src
-git clone https://github.com/anujjain-dev/unitree-go2-ros2.git
+git clone https://github.com/RobInLabUJI/unitree-go2-ros2.git
 cd <your_ws>
 rosdep install --from-paths src --ignore-src -r -y
 ```
@@ -70,7 +59,7 @@ rosdep install --from-paths src --ignore-src -r -y
 ```bash
 cd <your_ws>
 colcon build
-. <your_ws>/install/setup.bash
+source <your_ws>/install/setup.bash
 ```
 ## 2. Quick Start
 
@@ -109,7 +98,7 @@ ros2 launch go2_config gazebo_velodyne.launch.py rviz:=true
 
 ![Go2 Velodyne Gazebo RViz Launch](.docs/gazebo_velodyne_rviz_launch.png)
 
-### 2.6 Go2 Hokoyu 2D LiDAR Config Gazbeo demo: Run the Gazebo environment
+### 2.6 Go2 Hokuyo 2D LiDAR Config Gazebo demo: Run the Gazebo environment
 
 > NOTE: To use Laser instead of 3D Velodyne LiDAR, comment `<xacro:include filename="$(find go2_description)/xacro/velodyne.xacro"/>` and uncomment `<xacro:include filename="$(find go2_description)/xacro/laser.xacro"/>` in `robot_VLP.xacro` file located inside `robots/description/go2_description/xacro/` folder.
 
