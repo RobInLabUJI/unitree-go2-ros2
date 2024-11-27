@@ -63,7 +63,7 @@ source <your_ws>/install/setup.bash
 ```
 ## 2. Quick Start
 
-You don't need a physical robot to run the following demos. Make sure you have ros2_control, gazebo ros, controller manager packages installed in your ros2 setup.
+You don't need a physical robot to run the following demos. Make sure you have ros2_control, Gazebo ROS, controller manager packages installed in your ROS2 setup.
 
 ### 2.1 Gazebo demo: Run the Gazebo environment
 ```bash
@@ -71,7 +71,7 @@ ros2 launch go2_config gazebo.launch.py
 ```
 ![Go2 Gazebo Launch](.docs/gazebo_launch.png)
 
-### 2.2 Walking demo in RVIZ: Run the gazebo along with rviz
+### 2.2 Walking demo in RViz: Run the Gazebo along with RViz
 ```bash
 ros2 launch go2_config gazebo.launch.py rviz:=true
 ```
@@ -89,7 +89,7 @@ ros2 launch go2_config gazebo_velodyne.launch.py
 ```
 ![Go2 Velodyne Gazebo Launch](.docs/gazebo_velodyne_launch.png)
 
-### 2.5 Go2 Veldyne Config Walking/PointCloud demo in RVIZ: Run the gazebo along with rviz
+### 2.5 Go2 Veldyne Config Walking/PointCloud demo in RVIZ: Run the Gazebo along with RViz
 ```bash
 ros2 launch go2_config gazebo_velodyne.launch.py rviz:=true
 ```
@@ -100,11 +100,14 @@ ros2 launch go2_config gazebo_velodyne.launch.py rviz:=true
 ```bash
 ros2 launch go2_config gazebo_hokuyo.launch.py 
 ```
+![Go2 Velodyne Gazebo Launch](.docs/gazebo_hokuyo_launch.png)
 
-To Run the gazebo along with rviz
+To run the Gazebo along with RViz
 ```bash
 ros2 launch go2_config gazebo_hokuyo.launch.py rviz:=true
 ```
+
+![Go2 Velodyne Gazebo RViz Launch](.docs/gazebo_hokuyo_rviz_launch.png)
 
 ## 3. Tuning gait parameters
 
