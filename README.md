@@ -109,6 +109,16 @@ ros2 launch go2_config gazebo_hokuyo.launch.py rviz:=true
 
 ![Go2 Velodyne Gazebo RViz Launch](.docs/gazebo_hokuyo_rviz_launch.png)
 
+### 2.7 Go2 in a Gazebo world
+
+To run the Gazebo along with RViz
+```bash
+ros2 launch go2_config gazebo_hokuyo.launch.py rviz:=true \
+     world:=`ros2 pkg prefix --share go2_config`/worlds/outdoor.world
+```
+
+![Go2 Gazebo world Launch](.docs/gazebo_outdoor_world.png)
+
 ## 3. Tuning gait parameters
 
 The gait configuration for your robot can be found in <my_robot_config>/gait/gait.yaml.
