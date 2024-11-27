@@ -85,6 +85,7 @@ def generate_launch_description():
             "gait_config_path": gait_config,
             "use_sim_time": LaunchConfiguration("use_sim_time"),
             "robot_name": LaunchConfiguration("robot_name"),
+            "world": LaunchConfiguration("world"),
             "gazebo": "true",
             "lite": LaunchConfiguration("lite"),
             "rviz": LaunchConfiguration("rviz"),
